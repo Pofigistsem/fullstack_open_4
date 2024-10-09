@@ -1,0 +1,6 @@
+Technology
+"cors": "^2.8.5", // cross origin resource sharing, to allow our server to interact with resources on different domains
+"dotenv": "^16.4.5", // environmental variables (secrets) - api key...
+"express": "^4.19.2", // high level api for server creation
+"mongoose": "^8.5.3" // mongoDB database management api.
+

@@ -1,0 +1,43 @@
+GET http://localhost:3003/api/blogs
+// get all blogs
+
+###
+POST http://localhost:3003/api/users
+content-type: application/json
+
+{
+    "username": "testUser1234",
+    "password": "testPassword",
+    "name": "Test User"
+}
+// create new user (testUser)
+
+###
+POST http://localhost:3003/api/blogs
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RVc2VyMTIzNCIsImlkIjoiNjcwMWNmODY0Zjk2NTQ5NTY0NDhhZTAzIiwiaWF0IjoxNzI4MTcxOTEzLCJleHAiOjE3MjgxNzU1MTN9.zehxaeOHwpoGO2iRuxT0-bO1fSidDZoeA3zAxj68kBw
+
+{
+    "title": "test blog",
+    "author": "Test",
+    "url": "www.testUser1.com",
+    "likes": 4
+}
+// create new blog for testUser
+
+###
+DELETE http://localhost:3003/api/blogs/670025925d623a476592b4cd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RVc2VyMTIzNCIsImlkIjoiNjcwMWNmODY0Zjk2NTQ5NTY0NDhhZTAzIiwiaWF0IjoxNzI4MTcxOTEzLCJleHAiOjE3MjgxNzU1MTN9.zehxaeOHwpoGO2iRuxT0-bO1fSidDZoeA3zAxj68kBw
+
+// delete blog for testUser
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username": "testUser1234",
+    "password": "testPassword"
+}
+
+// login for testUser
